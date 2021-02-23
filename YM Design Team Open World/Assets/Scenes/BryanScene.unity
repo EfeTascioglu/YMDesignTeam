@@ -1091,7 +1091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9dcbcaab26b9340a778b3b01996cb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cController: {fileID: 0}
+  cController: {fileID: 1888339944}
   pSpeed: 0
   jForce: 0
   gScale: 0
