@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody rb;
+    private Animator PlayerAnim;
     public GameObject player;
     public Transform head;
     public float walk_speed;
@@ -19,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = player.GetComponent<Rigidbody>();
+        PlayerAnim = player.GetComponent<Animator>();
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -29,29 +31,50 @@ public class PlayerMovement : MonoBehaviour
         {
             BodyTurnAsHead();
             rb.velocity = rb.transform.forward * walk_speed;
+            PlayerAnim.SetTrigger("Walk");
+            PlayerAnim.SetBool("Stop", false);
         }
 
         if (Input.GetKey(KeyCode.S))
         {
             BodyTurnAsHead();
             rb.velocity = rb.transform.forward * -walk_speed;
+            PlayerAnim.SetTrigger("Walk");
+            PlayerAnim.SetBool("Stop", false);
         }
 
         if (Input.GetKey(KeyCode.A))
         {
             BodyTurnAsHead();
             rb.velocity = rb.transform.right * walk_speed * -1;
+            PlayerAnim.SetTrigger("Walk");
+            PlayerAnim.SetBool("Stop", false);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
             BodyTurnAsHead();
             rb.velocity = rb.transform.right * walk_speed;
+            PlayerAnim.SetTrigger("Walk");
+            PlayerAnim.SetBool("Stop", false);
+        }
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            PlayerAnim.SetBool("Stop", false);
+            PlayerAnim.SetTrigger("Crouch");
+            
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             rb.velocity = new Vector3(rb.velocity.x, jump_speed, rb.velocity.z);
+            
+        }
+
+        if (Input.anyKey == false)
+        {
+            PlayerAnim.SetBool("Stop", true);
         }
 
         if (XRot - Input.GetAxis("Mouse Y") * 4 < max_min_viewX[0] && XRot - Input.GetAxis("Mouse Y") * 4 > max_min_viewX[1])

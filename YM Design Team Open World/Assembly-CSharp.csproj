@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\Bryan's Script\BryanPlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Efe's Scripts\Test.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\CursorSettings.cs" />
+    <Compile Include="Assets\Scripts\Sean's Scripts\PlayerCamera.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\SeanPlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\TerrainGenerator.cs" />
