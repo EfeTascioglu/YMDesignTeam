@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: bdbb1063cc58f1848b669b26246170ab, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: e75e19a29cb53bd499884c5dcd749162, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.42968908, g: 0.22913992, b: 0.2892899, a: 1}
+  m_IndirectSpecularColor: {r: 0.44184503, g: 0.56855834, b: 0.88486373, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -878,7 +878,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -876546973899608171, guid: 5346372396a47f0469ee6840dccb1aab, type: 3}
+  - {fileID: 2100000, guid: 0f5a4162c7b27dd45bc95351e36ce733, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

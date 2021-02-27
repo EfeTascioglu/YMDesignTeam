@@ -36,7 +36,8 @@ public class PlayerMovement : MonoBehaviour
         Vector3 x_z_right = new Vector3(head.transform.right.x, 0, head.transform.right.z);
         if (Input.GetKey(KeyCode.W))
         {
-            rb.velocity = x_z_forward * walk_speed;
+            Vector3 new_v = x_z_forward * walk_speed;
+            rb.velocity = new Vector3(new_v.x, rb.velocity.y, new_v.z);
 
             PlayerAnim.SetTrigger("Walk");
             PlayerAnim.SetBool("Stop", false);
@@ -45,7 +46,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.S))
         {
-            rb.velocity = x_z_forward * -walk_speed;
+            Vector3 new_v = x_z_forward * -walk_speed;
+            rb.velocity = new Vector3(new_v.x, rb.velocity.y, new_v.z);
             PlayerAnim.SetTrigger("Walk");
             PlayerAnim.SetBool("Stop", false);
             SnapToHead = true;
@@ -53,7 +55,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            rb.velocity = x_z_right * walk_speed * -1;
+            Vector3 new_v = x_z_right * -walk_speed;
+            rb.velocity = new Vector3(new_v.x, rb.velocity.y, new_v.z);
             PlayerAnim.SetTrigger("Walk");
             PlayerAnim.SetBool("Stop", false);
             SnapToHead = true;
@@ -61,7 +64,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
         {
-            rb.velocity = x_z_right * walk_speed;
+            Vector3 new_v = x_z_right * walk_speed;
+            rb.velocity = new Vector3(new_v.x, rb.velocity.y, new_v.z);
             PlayerAnim.SetTrigger("Walk");
             PlayerAnim.SetBool("Stop", false);
             SnapToHead = true;
@@ -94,7 +98,25 @@ public class PlayerMovement : MonoBehaviour
         max_min_viewY[1] =  d_max_min_viewY[1] + player.transform.localEulerAngles.y;
         if (YRot < 0)
         {
-            YRot = 360 + YRot;
+            YRot += 360;
+        }
+        else
+        {
+            if (YRot > 360)
+            {
+                YRot -= 360;
+            }
+        }
+        if (YRotBody < 0)
+        {
+            YRotBody += 360;
+        }
+        else
+        {
+            if (YRotBody > 360)
+            {
+                YRotBody -= 360;
+            }
         }
         if (YRot + Input.GetAxis("Mouse X") * 4 < max_min_viewY[0] && YRot + Input.GetAxis("Mouse X") * 4 > max_min_viewY[1])
         {
@@ -105,16 +127,14 @@ public class PlayerMovement : MonoBehaviour
             YRot += Input.GetAxis("Mouse X") * 4;
             YRotBody += Input.GetAxis("Mouse X") * 4;
         }
-
+        print(YRot);
+        print(YRotBody);
         head.rotation = Quaternion.Euler(new Vector3(XRot, YRot, head.rotation.z));
-        if(SnapToHead == false)
+        if(SnapToHead == true)
         {
-            player.transform.rotation = Quaternion.Euler(new Vector3(player.transform.rotation.x, YRotBody, player.transform.rotation.z));
+            YRotBody = YRot;
         }
-        else
-        {
-            player.transform.rotation = Quaternion.Euler(new Vector3(player.transform.rotation.x, YRot, player.transform.rotation.z));
-        }
+        player.transform.rotation = Quaternion.Euler(new Vector3(player.transform.rotation.x, YRotBody, player.transform.rotation.z));
         SnapToHead = false;
     }
 
