@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class MinecraftPlayerMovement : MonoBehaviour
 {
     private Rigidbody rb;
     private Animator PlayerAnim;

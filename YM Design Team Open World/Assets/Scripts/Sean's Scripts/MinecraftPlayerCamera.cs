@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCamera : MonoBehaviour
+public class MinecraftPlayerCamera : MonoBehaviour
 {
     public Camera cam;
     private Animator CamAnim;

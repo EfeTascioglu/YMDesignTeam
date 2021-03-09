@@ -66,11 +66,10 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Bryan's Script\BryanPlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Efe's Scripts\Test.cs" />
-    <Compile Include="Assets\Scripts\Sean's Scripts\CursorSettings.cs" />
-    <Compile Include="Assets\Scripts\Sean's Scripts\PlayerCamera.cs" />
-    <Compile Include="Assets\Scripts\Sean's Scripts\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Sean's Scripts\MinecraftCursorSettings.cs" />
+    <Compile Include="Assets\Scripts\Sean's Scripts\MinecraftPlayerCamera.cs" />
+    <Compile Include="Assets\Scripts\Sean's Scripts\MinecraftPlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\SeanPlayerMovement.cs" />
-    <Compile Include="Assets\Scripts\Sean's Scripts\SetOrigin.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\TerrainGenerator.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.15f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
