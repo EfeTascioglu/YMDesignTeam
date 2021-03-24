@@ -9,7 +9,7 @@ public class MapEditor : Editor
         base.OnInspectorGUI();
         GenerateMap gm = (GenerateMap)target;
         if (EditorGUILayout.Toggle(false))
-        {
+        {     
             gm.GenerateNewMap();
         }
         

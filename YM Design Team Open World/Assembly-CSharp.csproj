@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\Sean's Scripts\Future terrain scripts\DisplayMap.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\Future terrain scripts\GenerateMap.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\Future terrain scripts\MapEditor.cs" />
+    <Compile Include="Assets\Scripts\Sean's Scripts\Future terrain scripts\MapTextureGenerator.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\Future terrain scripts\Noise.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\PlayerCamera.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\PlayerMovement.cs" />

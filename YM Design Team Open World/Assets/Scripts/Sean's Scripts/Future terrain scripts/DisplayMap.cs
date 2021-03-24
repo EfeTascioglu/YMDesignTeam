@@ -4,28 +4,15 @@ using UnityEngine;
 
 public class DisplayMap : MonoBehaviour
 {
+
     public Renderer display;
-
-    public void DrawMap(float[,] perlinNoise)
+    public void DrawTexture(Texture2D texture)
     {
-        int width = perlinNoise.GetLength(0);
-        int height = perlinNoise.GetLength(1);
-
-        Texture2D texture = new Texture2D(width, height);
-        Color[] pixel_colors = new Color[width * height];
-        for (int x = 0; x < width; x++)
-        {
-            for (int y = 0; y < height; y++)
-            {
-                pixel_colors[y * width + x] = Color.Lerp(Color.black, Color.white, perlinNoise[x, y]);
-            }
-        }
-
-        texture.SetPixels(pixel_colors);
-        texture.Apply();
-
+        //using point to reduce the blurryness between pixels
+        texture.filterMode = FilterMode.Point;
+        texture.wrapMode = TextureWrapMode.Clamp;
         display.sharedMaterial.mainTexture = texture;
-        display.gameObject.transform.localScale = new Vector3(width, 1, height);
+        display.transform.localScale = new Vector3(texture.width, 1, texture.height);
 
     }
 }

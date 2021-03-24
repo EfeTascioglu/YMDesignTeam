@@ -773,9 +773,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54dace4e01e1e704291d42ba9d406b26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drawMode: 1
   x_size: 200
   y_size: 200
-  scale: 20
+  scale: 50
+  octaves: 10
+  persistance: 0.5
+  lacunarity: 2
+  seed: 28
+  regions:
+  - terrain_name: Deep Sea
+    height: 0.3
+    color: {r: 0.15686274, g: 0.2506335, b: 0.8666667, a: 1}
+  - terrain_name: Sea
+    height: 0.4
+    color: {r: 0.15686274, g: 0.6133497, b: 0.8666667, a: 1}
+  - terrain_name: Sand
+    height: 0.5
+    color: {r: 0.8301887, g: 0.80341095, b: 0.24279101, a: 1}
+  - terrain_name: Land
+    height: 1
+    color: {r: 0.3408912, g: 0.6981132, b: 0.19099323, a: 1}
 --- !u!4 &1548576683
 Transform:
   m_ObjectHideFlags: 0
