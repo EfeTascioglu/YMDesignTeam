@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class GenerateMap : MonoBehaviour
 {
-    public enum DrawMode {NoiseMap, ColorMap}
+    public enum DrawMode {NoiseMap, ColorMap, MeshMap}
     public DrawMode drawMode;
     public int x_size;
     public int y_size;
     public float scale;
+    public float mesh_height_multiplier;
+    public AnimationCurve mesh_curve;
     public int octaves;
     public float persistance;
     public float lacunarity;
@@ -18,6 +20,11 @@ public class GenerateMap : MonoBehaviour
     // Start is called before the first frame update
 
     //if some parts are not showing up the Height of the regions must be from lowest to greatest
+
+    private void Start()
+    {
+        GenerateNewMap();
+    }
     public void GenerateNewMap()
     {
         float[,] new_map = Noise.GenerateNoiseMap(x_size, y_size, seed, scale,  octaves, persistance, lacunarity);
@@ -44,8 +51,11 @@ public class GenerateMap : MonoBehaviour
         }
         else if(drawMode == DrawMode.ColorMap)
         {
-            Debug.Log((new_colors.Length, x_size, y_size).ToString());
             displayMap.DrawTexture(MapTextureGenerator.TextureFromColorMap(new_colors, x_size, y_size));
+        }
+        else if(drawMode == DrawMode.MeshMap)
+        {
+            displayMap.DrawMesh(MeshGenerator.GenerateTerrainMesh(new_map, mesh_height_multiplier, mesh_curve), MapTextureGenerator.TextureFromColorMap(new_colors, x_size, y_size));
         }
         
     }
