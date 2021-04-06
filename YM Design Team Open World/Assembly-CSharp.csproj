@@ -55,6 +55,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\BasicMovement.cs" />
      <Compile Include="Assets\Scripts\Bryan&apos;s Script\BryanPlayerMovement.cs" />
      <Compile Include="Assets\Scripts\Efe&apos;s Scripts\Test.cs" />
      <Compile Include="Assets\Scripts\Sean&apos;s Scripts\CursorSettings.cs" />
