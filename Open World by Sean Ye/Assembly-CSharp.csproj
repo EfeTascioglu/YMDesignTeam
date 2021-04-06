@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B0DA9FA5-AA8A-4906-7655-6DC6EAA45A16}</ProjectGuid>
+    <ProjectGuid>{1F0E8156-75AB-9161-25A4-9C6D2E430DEB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,9 +56,9 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\TerrainGenerator.cs" />
     <Compile Include="Assets\PlayerMovement.cs" />
     <Compile Include="Assets\CursorSettings.cs" />
+    <Compile Include="Assets\TerrainGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

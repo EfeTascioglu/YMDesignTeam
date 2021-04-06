@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
@@ -64,11 +64,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BasicMovement.cs" />
     <Compile Include="Assets\Scripts\Bryan's Script\BryanPlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Efe's Scripts\Test.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\CursorSettings.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\Future terrain scripts\DisplayMap.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\Future terrain scripts\GenerateMap.cs" />
+    <Compile Include="Assets\Scripts\Sean's Scripts\Future terrain scripts\GenerateStructures.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\Future terrain scripts\MapEditor.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\Future terrain scripts\MapTextureGenerator.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\Future terrain scripts\MeshGenerator.cs" />
