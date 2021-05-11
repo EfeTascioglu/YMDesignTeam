@@ -273,7 +273,7 @@ public class MinecraftPlayerMovement : MonoBehaviour
             smoothlerp_start = 0;
         }
 
-        player.transform.rotation = Quaternion.Euler(new Vector3(player.transform.rotation.x, (float)YRotBody, player.transform.rotation.z));
+        player.transform.rotation = Quaternion.Euler(new Vector3((float)player.transform.rotation.x, (float)YRotBody, (float)player.transform.rotation.z));
         SnapToHead = false;
     }
 

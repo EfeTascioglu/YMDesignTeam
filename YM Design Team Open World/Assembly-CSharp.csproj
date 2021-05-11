@@ -64,13 +64,27 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\BasicMovement.cs" />
     <Compile Include="Assets\Scripts\Bryan's Script\BryanPlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Efe's Scripts\Test.cs" />
+    <Compile Include="Assets\Scripts\Sean's Scripts\CursorSettings.cs" />
+    <Compile Include="Assets\Scripts\Sean's Scripts\Future terrain scripts\DisplayMap.cs" />
+    <Compile Include="Assets\Scripts\Sean's Scripts\Future terrain scripts\GenerateMap.cs" />
+    <Compile Include="Assets\Scripts\Sean's Scripts\Future terrain scripts\GenerateStructures.cs" />
+    <Compile Include="Assets\Scripts\Sean's Scripts\Future terrain scripts\MapEditor.cs" />
+    <Compile Include="Assets\Scripts\Sean's Scripts\Future terrain scripts\MapTextureGenerator.cs" />
+    <Compile Include="Assets\Scripts\Sean's Scripts\Future terrain scripts\MeshGenerator.cs" />
+    <Compile Include="Assets\Scripts\Sean's Scripts\Future terrain scripts\Noise.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\MinecraftCursorSettings.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\MinecraftPlayerCamera.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\MinecraftPlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Sean's Scripts\PlayerCamera.cs" />
+    <Compile Include="Assets\Scripts\Sean's Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\SeanPlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Sean's Scripts\SeanVehicle.cs" />
+    <Compile Include="Assets\Scripts\Sean's Scripts\SetOrigin.cs" />
     <Compile Include="Assets\Scripts\Sean's Scripts\TerrainGenerator.cs" />
+    <Compile Include="Assets\Scripts\Sean's Scripts\WaterGenerator.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.15f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
