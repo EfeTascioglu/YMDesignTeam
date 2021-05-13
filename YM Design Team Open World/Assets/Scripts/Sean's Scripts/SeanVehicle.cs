@@ -40,13 +40,8 @@ public class SeanVehicle : MonoBehaviour
     // Update is called once per frame
     public void FixedUpdate()
     {
-        print(armature);
-        print(rb);
-        
         if (armature == null)
         {
-         
-
             return;
         }
         else
@@ -110,33 +105,51 @@ public class SeanVehicle : MonoBehaviour
 
         foreach (var axle in AxleInfo)
         {
+            Transform left_t = axle.left.gameObject.transform;
+            Transform right_t = axle.right.gameObject.transform;
+
             if (axle.can_steer)
             {
                 axle.left.steerAngle = current_angle;
                 axle.right.steerAngle = current_angle;
 
-                axle.left.gameObject.transform.localRotation = Quaternion.Euler(0, current_angle, 0);
-                axle.right.gameObject.transform.localRotation = Quaternion.Euler(0, current_angle, 0);
+                Quaternion new_left_rot = Quaternion.Euler(0, current_angle, axle.left.rpm / 240 * Time.deltaTime);
+                Quaternion new_right_rot = Quaternion.Euler(0, current_angle, axle.right.rpm / 240 * Time.deltaTime);
+                print(new_left_rot);
+                axle.left.gameObject.transform.localRotation = new_left_rot;
+                axle.right.gameObject.transform.localRotation = new_right_rot;
             }
 
             if (axle.powered)
             {
                 axle.left.motorTorque = current_speed;
                 axle.right.motorTorque = current_speed;
+
+                if(axle.can_steer == false)
+                {
+                    Quaternion new_left_rot = Quaternion.Euler(0, 0, axle.left.rpm / 240 * Time.deltaTime);
+                    Quaternion new_right_rot = Quaternion.Euler(0, 0, axle.right.rpm / 240 * Time.deltaTime);
+
+                    axle.left.gameObject.transform.localRotation = new_left_rot;
+                    axle.right.gameObject.transform.localRotation = new_right_rot;
+                }
+               
             }
 
-            axle.left.gameObject.transform.localRotation = Quaternion.Euler(0,  0, axle.left.rpm / 240 * Time.deltaTime);
-            axle.right.gameObject.transform.localRotation = Quaternion.Euler(0, 0, axle.right.rpm / 240 * Time.deltaTime);
+
+            
 
             if (brakes)
             {
                 axle.left.wheelDampingRate = 100;
                 axle.right.wheelDampingRate = 100;
+                current_speed = 0;
             }
             else
             {
                 axle.left.wheelDampingRate = 0.25f;
                 axle.right.wheelDampingRate = 0.25f;
+                current_speed = 0;
             }
         }
     }
