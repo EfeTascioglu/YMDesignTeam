@@ -196,7 +196,7 @@ public class PlayerMovement : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Collider[] collisions = Physics.OverlapSphere(GroundDetector.position, 0.3f, can_jump_on, QueryTriggerInteraction.Ignore);
+            Collider[] collisions = Physics.OverlapSphere(GroundDetector.position, 0.3f, can_jump_on, QueryTriggerInteraction.Collide);
             if (collisions.Length > 0)
             {
                 print(collisions[0]);
