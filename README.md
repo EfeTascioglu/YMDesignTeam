@@ -12,3 +12,4 @@ Developped by:
 - Mike Peng
 - Bryan Yan
 - Julian Birsan
+- Jordan Lipson
