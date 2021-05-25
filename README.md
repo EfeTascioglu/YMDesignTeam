@@ -11,3 +11,4 @@ Developped by:
 - Sean Ye
 - Mike Peng
 - Bryan Yan
+- Julian Birsan
