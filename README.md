@@ -10,3 +10,4 @@ Developped by:
 - Efe Tascioglu
 - Sean Ye
 - Mike Peng
+- Bryan Yan
